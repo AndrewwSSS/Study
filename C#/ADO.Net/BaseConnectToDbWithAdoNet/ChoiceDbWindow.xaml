@@ -1,0 +1,62 @@
+﻿<Window x:Class="BaseConnectToDbWithAdoNet.ChoiceDbWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BaseConnectToDbWithAdoNet"
+        mc:Ignorable="d"
+        Title="ChoiceDbWindow"
+        Height="110.448"
+        Width="276.788"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Grid.Column="0"
+                   Text="Connection string:"
+                   TextAlignment="Center"
+                   VerticalAlignment="Center"/>
+
+       
+
+
+        <TextBox Grid.Row="0"
+                 Grid.Column="1"
+                 Margin="5, 10"
+                 x:Name="TB_ConnectionString"/>
+
+        <Grid Grid.Row="1"
+              Grid.Column="0"
+              Grid.ColumnSpan="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button 
+                Grid.Column="0"
+                Margin="30, 5"
+                Content="OK"
+                x:Name="BTN_OK"
+                Click="BTN_OK_OnClick"/>
+
+            <Button 
+                Grid.Column="1"
+                Margin="30, 5"
+                Content="Cancel"
+                x:Name="BTN_Cancel"
+                Click="BTN_Cancel_OnClick"/>
+        </Grid>
+      
+    </Grid>
+</Window>

@@ -1,0 +1,138 @@
+﻿<Window x:Class="Multithreading1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Multithreading1"
+        mc:Ignorable="d" Height="495" Width="820">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Range:" 
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontSize="20"/>
+
+                <TextBox Grid.Column="1"
+                         Margin="5"
+                         x:Name="TBLeftBound"
+                         FontSize="30"
+                         VerticalContentAlignment="Center"/>
+
+                <TextBox Grid.Column="2"
+                         Margin="5"
+                         x:Name="TBRightBound"
+                         FontSize="30"
+                         VerticalContentAlignment="Center"/>
+
+            </Grid>
+
+            <UniformGrid Grid.Row="1" Columns="4">
+                <Button Margin="3"
+                            x:Name="BTN_StartNumberThread"
+                            FontSize="20"
+                            Content="Start" Click="StartNumbersThread_Click"/>
+
+                <Button Margin="3"
+                            x:Name="BTN_PauseNumberThread"
+                            FontSize="20"
+                            Content="Pause"
+                            IsEnabled="False"
+                            Click="BTN_StopNumberThread_Click"/>
+
+                <Button Margin="3"
+                            x:Name="BTN_ResumeNumberThread"
+                            FontSize="20"
+                            Content="Resume"
+                            IsEnabled="False"
+                            Click="BTN_ResumeNumberThread_Click"/>
+
+                <Button Margin="3"
+                            x:Name="BTN_RefreshNumberThread"
+                            FontSize="20"
+                            Content="Refresh"
+                            IsEnabled="False"
+                            Click="BTN_RefreshNumberThread_Click"/>
+            </UniformGrid>
+
+
+            <ListBox Grid.Row="3" Margin="5" x:Name="LB_Numbers">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"
+                                   FontSize="40" 
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Center"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <UniformGrid Grid.Row="0" Columns="4" Margin="10">
+                <Button Margin="5, 5, 5, 30"
+                            FontSize="12"
+                            Content="Start Fibonacci"
+                            x:Name="BTN_StartFibonacciThread"
+                            Click="StartFibonacciThread_Click"/>
+
+                <Button Margin="5, 5, 5, 30"
+                            FontSize="20"
+                            Content="Pause"
+                            x:Name="BTN_PauseFibonacciThread"
+                            IsEnabled="False"
+                            Click="BTN_PauseFibonacciThread_Click"/>
+                
+                <Button Margin="5, 5, 5, 30"
+                            FontSize="20"
+                            Content="Resume"
+                            x:Name="BTN_ResumeFibonacciThread"
+                            IsEnabled="False"
+                            Click="BTN_ResumeFibonacciThread_Click"/>
+
+                <Button Margin="5, 5, 5, 30"
+                            FontSize="20"
+                            Content="Refresh"
+                            x:Name="BTN_RefreshFibonacciThread"
+                            IsEnabled="False"
+                            Click="BTN_RefreshFibonacciThread_Click"/>
+
+            </UniformGrid>
+            <ListBox x:Name="LB_Fibonacci" Margin="5" Grid.Row="1">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"
+                                   FontSize="40" 
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Center"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+
+    </Grid>
+</Window>
+

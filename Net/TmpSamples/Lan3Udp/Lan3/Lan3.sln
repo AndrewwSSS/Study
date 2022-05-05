@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanUdpTest", "LanUdpTest\LanUdpTest.csproj", "{4D36DAFA-52DD-4534-8F7D-6CBB69BA9ED5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpMessenger", "UdpMessenger\UdpMessenger.csproj", "{32F9FA36-0BDC-4237-A623-91F548FB943D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D36DAFA-52DD-4534-8F7D-6CBB69BA9ED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D36DAFA-52DD-4534-8F7D-6CBB69BA9ED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D36DAFA-52DD-4534-8F7D-6CBB69BA9ED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D36DAFA-52DD-4534-8F7D-6CBB69BA9ED5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F9FA36-0BDC-4237-A623-91F548FB943D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F9FA36-0BDC-4237-A623-91F548FB943D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F9FA36-0BDC-4237-A623-91F548FB943D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F9FA36-0BDC-4237-A623-91F548FB943D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4193FF70-A9E7-4CBE-B41D-28CA59FD2CE5}
+	EndGlobalSection
+EndGlobal

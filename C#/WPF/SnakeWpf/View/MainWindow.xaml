@@ -1,0 +1,164 @@
+﻿<Window x:Class="Snake.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:vievwmodel="clr-namespace:Snake.VievwModel" d:DataContext="{d:DesignInstance Type=vievwmodel:ViewModel}"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="326" Width="743" 
+        >
+    <Window.InputBindings>
+        <KeyBinding Key="Right" Command="{Binding MoveCommand}" CommandParameter="Right"/>
+        <KeyBinding Key="Down" Command="{Binding MoveCommand}" CommandParameter="Down"/>
+        <KeyBinding Key="Left" Command="{Binding MoveCommand}" CommandParameter="Left"/>
+        <KeyBinding Key="Up" Command="{Binding MoveCommand}" CommandParameter="Up"/>
+        <KeyBinding Key="D" Command="{Binding MoveCommand}" CommandParameter="Right"/>
+        <KeyBinding Key="S" Command="{Binding MoveCommand}" CommandParameter="Down"/>
+        <KeyBinding Key="A" Command="{Binding MoveCommand}" CommandParameter="Left"/>
+        <KeyBinding Key="W" Command="{Binding MoveCommand}" CommandParameter="Up"/>
+        <KeyBinding Key="Space" Command="{Binding StartPauseRestartCommand}"/>
+    </Window.InputBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" ></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="Gray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.15*"></ColumnDefinition>
+                <ColumnDefinition Width="0.15*"></ColumnDefinition>
+                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+
+            <Button Command="{Binding StartPauseRestartCommand}" Content="Start" Margin="5" Background="Green" FontSize="20" x:Name="Button11" Grid.Column="5"/>
+
+            <Grid Grid.Column="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Theme:" FontSize="30" Foreground="Blue"></TextBlock>
+                <ComboBox  FontSize="15" HorizontalContentAlignment="Center" Margin="5" Name="CBThemes" SelectionChanged="CBTheme_SelectionChanged" Grid.Column="1" Focusable="False"></ComboBox>
+            </Grid>
+            
+
+
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Score: "  FontSize="30" Foreground="Yellow" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Margin="10, 0, 0,0"></TextBlock>
+                <TextBlock Text="{Binding Score}" FontSize="30" Foreground="Yellow" FontWeight="Bold" TextAlignment="Left" VerticalAlignment="Center" Grid.Column="1"></TextBlock>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Tail Length: " FontSize="30" Foreground="Pink" FontWeight="Bold" VerticalAlignment="Center" Grid.Column="0"></TextBlock>
+                <TextBlock Text="{Binding TailCount}" FontSize="30" Foreground="Pink" FontWeight="Bold" VerticalAlignment="Center" TextAlignment="Left" Grid.Column="1"></TextBlock>
+            </Grid>
+            <Grid Grid.Column="2" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Duration of Game: " FontSize="30" Foreground="Orange" FontWeight="Bold" VerticalAlignment="Center" Grid.Column="0"></TextBlock>
+                <TextBlock FontSize="30" Foreground="Orange" FontWeight="Bold"   VerticalAlignment="Center" TextAlignment="Left" Grid.Column="1" x:Name="TBPastTime"></TextBlock>
+            </Grid>
+
+        </Grid>
+        
+        
+        <Grid Grid.Row="1">
+            <Border Background="Black">
+                <Border BorderThickness="1" BorderBrush="Red" Grid.ColumnSpan="2" x:Name="Field">
+                    <ItemsControl  Background="{DynamicResource FieldBackground}"  ItemsSource="{Binding FieldView}"  >
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border  Margin="1" >
+                                    <Border.Style>
+                                        <Style TargetType="Border">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding State}" Value="Empty">
+                                                    <Setter Property="BorderBrush" Value="{DynamicResource ElementBorderBrush}"></Setter>
+                                                    <Setter Property="BorderThickness" Value="{DynamicResource ElementThickness}"></Setter>
+
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding State}" Value="SnakeTail">
+                                                    <Setter Property="BorderBrush" Value="{DynamicResource SnakeTailBorderBrush}"/>
+                                                    <Setter Property="Background" Value="{DynamicResource SnakeTailBackground}"/>
+                                                    <Setter Property="BorderThickness" Value="{DynamicResource SnakeTailBorderThickness}"></Setter>
+                                                    <Setter Property="CornerRadius" Value="{DynamicResource SnakeTailCornerRadius}"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding State}" Value="Food">
+                                                    <Setter Property="Background" Value="{DynamicResource FoodBackground}"/>
+                                                    <Setter Property="BorderBrush" Value="{DynamicResource FoodBorderBrush}"/>
+                                                    <Setter Property="CornerRadius" Value="{DynamicResource FoodCornerRadius}"/>
+                                                    <Setter Property="BorderThickness" Value="{DynamicResource FoodBorderThickness}"></Setter>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding State}" Value="SnakeHead">
+                                                    <Setter Property="BorderBrush" Value="{DynamicResource SnakeHeadBorderBrush}"/>
+                                                    <Setter Property="Background" Value="{DynamicResource SnakeHeadBackground}"/>
+                                                    <Setter Property="BorderThickness" Value="{DynamicResource SnakeHeadBorderThickness}"></Setter>
+                                                    <Setter Property="CornerRadius" Value="{DynamicResource SnakeHeadCornerRadius}"/>
+                                                </DataTrigger>
+
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate >
+                                <UniformGrid Rows="{Binding DataContext.Height, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"  
+                                         Columns="{Binding DataContext.Width, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"></UniformGrid>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Border>
+            </Border>
+        </Grid>
+        
+        <Border Grid.Row="1" Visibility="Hidden" x:Name="BorderGameOver" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Gray"  CornerRadius="10">
+            <Grid Margin="100, 40, 100, 40">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="GAME OVER" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" Grid.Row="0" Foreground="White"></TextBlock>
+                <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Time: " FontSize="30" Grid.Column="0" Foreground="White"></TextBlock>
+                    <TextBlock x:Name="GOTime" FontSize="30" Grid.Column="1" FontWeight="Bold" Foreground="White"></TextBlock>
+                </Grid>
+
+                <Grid Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Score: " FontSize="30" Grid.Column="0" Foreground="White"></TextBlock>
+                    <TextBlock x:Name="GOScore" FontSize="30" Grid.Column="1" FontWeight="Bold" Foreground="White"></TextBlock>
+                </Grid>
+
+
+
+            </Grid >
+        </Border>
+        <Border Grid.Row="1" Visibility="Hidden" x:Name="BorderGamePause" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="10" Background="Gray" >
+            <TextBlock Text="Pause" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100, 40, 100, 40" Foreground="White"></TextBlock>
+        </Border>
+    </Grid>
+</Window>

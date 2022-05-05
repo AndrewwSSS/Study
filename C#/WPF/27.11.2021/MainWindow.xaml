@@ -1,0 +1,211 @@
+﻿<Window x:Class="_27._11._2021.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_27._11._2021"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="437.755" Width="890.306" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp">
+
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="DarkRed"
+                                BorderThickness="2">
+
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.25*"></RowDefinition>
+            <RowDefinition Height="0.25*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <GridSplitter Grid.Row ="1" HorizontalAlignment="Stretch" BorderBrush="Black" ResizeDirection="Rows"/>
+
+       
+
+        <Border Grid.Row ="1" BorderBrush="Red" BorderThickness="5">
+            <TextBlock Background="Aquamarine" x:Name="InputText" FontSize="10" TextAlignment="Center"></TextBlock>
+        </Border>
+
+        <Grid Grid.Row="2" KeyDown="Grid_KeyDown" Name="GridMain">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="2*" ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                <Button Margin="2" Background="MediumVioletRed">~</Button>
+                <Button Grid.Column="1" Margin="2" Background="MediumVioletRed">!</Button>
+                <Button Grid.Column="2" Margin="2" Background="MediumVioletRed">@</Button>
+                <Button Grid.Column="3" Margin="2" Background="Yellow">#</Button>
+                <Button Grid.Column="4" Margin="2" Background="LawnGreen">$</Button>
+                <Button Grid.Column="5" Margin="2" Background="DodgerBlue">%</Button>
+                <Button Grid.Column="6" Margin="2" Background="DodgerBlue">^</Button>
+                <Button Grid.Column="7" Margin="2" Background="MediumPurple">&amp;</Button>
+                <Button Grid.Column="8" Margin="2" Background="MediumPurple">*</Button>
+                <Button Grid.Column="9" Margin="2" Background="MediumVioletRed">(</Button>
+                <Button Grid.Column="10" Margin="2" Background="Yellow">)</Button>
+                <Button Grid.Column="11" Margin="2" Background="LawnGreen">_</Button>
+                <Button Grid.Column="12" Margin="2" Background="LawnGreen">+</Button>
+                <Button Grid.Column="13" Margin="2" Background="Gray">Back Space</Button>
+            </Grid>
+            <Grid Grid.Row ="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*" ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                <Button Margin="2" Background="Gray">Tab</Button>
+                <Button Grid.Column="1" Margin="2" Background="MediumVioletRed">Q</Button>
+                <Button Grid.Column="2" Margin="2 " Background="Yellow">W</Button>
+                <Button Grid.Column="3" Margin="2" Background="LawnGreen">E</Button>
+                <Button Grid.Column="4" Margin="2" Background="DodgerBlue">R</Button>
+                <Button Grid.Column="5" Margin="2" Background="DodgerBlue">T</Button>
+                <Button Grid.Column="6" Margin="2" Background="MediumPurple">Y</Button>
+                <Button Grid.Column="7" Margin="2" Background="MediumPurple">U</Button>
+                <Button Grid.Column="8" Margin="2" Background="MediumVioletRed">I</Button>
+                <Button Grid.Column="9" Margin="2" Background="Yellow">O</Button>
+                <Button Grid.Column="10" Margin="2" Background="LawnGreen">P</Button>
+                <Button Grid.Column="11" Margin="2" Background="LawnGreen">{</Button>
+                <Button Grid.Column="12" Margin="2" Background="LawnGreen">}</Button>
+                <Button Grid.Column="13" Margin="2" Background="LawnGreen">\</Button>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="2*" ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                <Button Margin="2" Background="Gray">Caps Lock</Button>
+                <Button Grid.Column="1" Margin="2" Background="MediumVioletRed">A</Button>
+                <Button Grid.Column="2" Margin="2" Background="Yellow">S</Button>
+                <Button Grid.Column="3" Margin="2" Background="LawnGreen">D</Button>
+                <Button Grid.Column="4" Margin="2" Background="DodgerBlue">F</Button>
+                <Button Grid.Column="5" Margin="2" Background="DodgerBlue">G</Button>
+                <Button Grid.Column="6" Margin="2" Background="MediumPurple">H</Button>
+                <Button Grid.Column="7" Margin="2" Background="MediumPurple">J</Button>
+                <Button Grid.Column="8" Margin="2" Background="MediumVioletRed">K</Button>
+                <Button Grid.Column="9" Margin="2" Background="Yellow">L</Button>
+                <Button Grid.Column="10" Margin="2" Background="LawnGreen">:</Button>
+                <Button Grid.Column="11" Margin="2" Background="LawnGreen">"</Button>
+                <Button Grid.Column="12" Margin="2" Background="Gray">Enter</Button>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="2.5*" ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                <Button Margin="2" Background="DimGray">L Shift</Button>
+                <Button Grid.Column="1" Margin="2" Background="MediumVioletRed">Z</Button>
+                <Button Grid.Column="2" Margin="2" Background="Yellow">X</Button>
+                <Button Grid.Column="3" Margin="2" Background="LawnGreen">C</Button>
+                <Button Grid.Column="4" Margin="2" Background="DodgerBlue">V</Button>
+                <Button Grid.Column="5" Margin="2" Background="DodgerBlue">B</Button>
+                <Button Grid.Column="6" Margin="2" Background="MediumPurple">N</Button>
+                <Button Grid.Column="7" Margin="2" Background="MediumPurple">M</Button>
+                <Button Grid.Column="8" Margin="2" Background="MediumVioletRed">&lt;</Button>
+                <Button Grid.Column="9" Margin="2" Background="Yellow">&gt;</Button>
+                <Button Grid.Column="10" Margin="2" Background="LawnGreen">?</Button>
+                <Button Grid.Column="11" Margin="2" Background="Gray">R Shift</Button>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition  Width="6*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+
+
+                <Button Margin="2" Background="Gray">Ctrl</Button>
+                <Button Grid.Column="1" Margin="2" Background="Gray">Win</Button>
+                <Button Grid.Column="2" Margin="2" Background="Gray">Alt</Button>
+                <Button Grid.Column="3" Margin="2"  Background="SandyBrown">Space</Button>
+                <Button Grid.Column="4" Margin="2" Background="Gray">Alt</Button>
+                <Button Grid.Column="5" Margin="2" Background="Gray">Win</Button>
+                <Button Grid.Column="6" Margin="2" Background="Gray">Ctrl</Button>
+
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>
+

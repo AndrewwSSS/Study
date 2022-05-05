@@ -1,0 +1,147 @@
+﻿<Window x:Class="_20._02._2022.Entities.AddUpdateContactWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_20._02._2022.Entities"
+        mc:Ignorable="d"
+         Title="AddUpdateContactWindow" Height="448.106" Width="483.801" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="Name:"
+                   Margin="10"
+                   FontSize="20"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock Grid.Row="1"
+                   Text="Surname:"
+                   Margin="10"
+                   FontSize="20"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock Grid.Row="2"
+                   Text="Telephone:"
+                   Margin="10"
+                   FontSize="20"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock Grid.Row="3"
+                   Text="Email:"
+                   Margin="10"
+                   FontSize="20"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock Grid.Row="4"
+                   Text="Date of birth:"
+                   Margin="10"
+                   FontSize="20"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock Grid.Row="5"
+                   Text="Priority:"
+                   Margin="10"
+                   FontSize="20"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock Grid.Row="7"
+                   Text="Is blocked:"
+                   Margin="10"
+                   FontSize="20"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock Grid.Row="6"
+                   Text="Group:"
+                   Margin="10, 10, 10 , 5"
+                   FontSize="20"
+                   HorizontalAlignment="Center"></TextBlock>
+
+
+
+        <TextBox
+            x:Name="TB_Name"
+            Grid.Column="1"
+            Grid.Row="0"
+            Margin="5"/>
+
+        <TextBox
+            x:Name="TB_Surname"
+            Grid.Column="1"
+            Grid.Row="1"
+            Margin="5"/>
+
+        <TextBox
+            x:Name="TB_Telephone"
+            Grid.Column="1"
+            Grid.Row="2"
+            Margin="5"/>
+
+        <TextBox
+            x:Name="TB_Mail"
+            Grid.Column="1"
+            Grid.Row="3"
+            Margin="5"/>
+
+        <TextBox
+            x:Name="TB_DateOfBirth"
+            Grid.Column="1"
+            Grid.Row="4"
+            Margin="5"/>
+
+        <TextBox
+            x:Name="TB_Priority"
+            Grid.Column="1"
+            Grid.Row="5"
+            Margin="5"/>
+
+        <ComboBox x:Name="CB_Groups"
+            Grid.Column="1"
+            Grid.Row="6"
+            Margin="5"/>
+
+        <ComboBox
+            x:Name="CB_IsBlocked"
+            Grid.Column="1"
+            Grid.Row="7"
+            Margin="5"/>
+
+        <Grid Grid.Row="8" ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0"
+                    x:Name="BTN_Save"
+                    Margin="10"
+                    Content="Save"
+                    Click="BTN_Save_OnClick"/>
+
+            <Button Grid.Column="1"
+                    x:Name="BTN_Cancel"
+                    Margin="10"
+                    Content="Cancel"
+                    Click="BTN_Cancel_OnClick"/>
+        </Grid>
+
+
+
+
+    </Grid>
+</Window>

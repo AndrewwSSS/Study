@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    
+    <SolidColorBrush x:Key="SnakeTailBackground" Color="DodgerBlue"/>
+    <SolidColorBrush x:Key="SnakeTailBorderBrush" Color="DarkBlue"/>
+    <CornerRadius x:Key="SnakeTailCornerRadius">0</CornerRadius>
+    <Thickness x:Key="SnakeTailBorderThickness">3</Thickness>
+
+
+    <SolidColorBrush x:Key="FoodBackground" Color="Red"/>
+    <SolidColorBrush x:Key="FoodBorderBrush" Color="Transparent"></SolidColorBrush>
+    <CornerRadius x:Key="FoodCornerRadius">50</CornerRadius>
+    <Thickness x:Key="FoodBorderThickness">0</Thickness>
+
+
+    <SolidColorBrush x:Key="SnakeHeadBackground" Color="Pink"></SolidColorBrush>
+    <SolidColorBrush x:Key="SnakeHeadBorderBrush" Color="DarkBlue"></SolidColorBrush>
+    <CornerRadius x:Key="SnakeHeadCornerRadius">0</CornerRadius>
+    <Thickness x:Key="SnakeHeadBorderThickness">3</Thickness>
+
+    
+    <Thickness x:Key="ElementThickness">0</Thickness>
+    <SolidColorBrush x:Key="FieldBackground" Color="#3A4047"></SolidColorBrush>
+    <SolidColorBrush x:Key="ElementBorderBrush" Color="Transparent"></SolidColorBrush>
+</ResourceDictionary>

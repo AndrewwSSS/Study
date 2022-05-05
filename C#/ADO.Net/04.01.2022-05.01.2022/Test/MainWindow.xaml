@@ -1,0 +1,212 @@
+﻿<Window x:Class="Test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="770" Width="958" Background="#007acc" Closed="Window_Closed" MinWidth="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0" Margin="10" Padding="5" Background="Beige" CornerRadius="5">
+            <DataGrid Visibility="Hidden" x:Name="MainDataGrid" FontSize="15" ColumnWidth="*" RowHeight="50"  AllowDrop="False" Background="Beige" BorderThickness="0" />
+        </Border>
+
+        <ScrollViewer Grid.Column="1">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="0"
+                        FontSize="16" 
+                        FontWeight="Bold"
+                        Margin="5, 9, 5, 5"
+                        x:Name="BTN_ConnectAndDisconnect"
+                        Click="BTN_ConnectAndDisconnect_OnClick"
+                        Content="Connect"/>
+
+                <Button Grid.Row="1"
+                        Margin="5"
+                        x:Name="BTN_Save"
+                        Click="BTN_Save_OnClick"
+                        FontSize="16"
+                        Content="Save"/>
+
+                <Button Grid.Row="2"
+                        Margin="5"
+                        x:Name="BTN_Reload"
+                        Click="BTN_Refresh_OnClick"
+                        FontSize="16"
+                        Content="Refresh"/>
+
+                <Button Grid.Row="3"
+                        Margin="5"
+                        x:Name="BTN_ShowNames"
+                        Click="BTN_ShowNames_OnClick"
+                        FontSize="16"
+                        Content="All names of Product"/>
+
+                <Button Grid.Row="4"
+                        Margin="5"
+                        x:Name="BTN_MaxCalories"
+                        Content="Max Calories"
+                        FontSize="16"
+                        Click="BTN_MaxCalories_OnClick" />
+
+                <Button Grid.Row="5"
+                        Margin="5"
+                        x:Name="BTN_MinCalories"
+                        Content="Min Calories"
+                        FontSize="16"
+                        Click="BTN_MinCalories_OnClick"/>
+
+                <Button Grid.Row="6"
+                        Margin="5" 
+                        x:Name="BTN_ShowColors"
+                        Click="BTN_ShowColors_OnClick"
+                        FontSize="16"
+                        Content="All colors"/>
+
+                <Button Grid.Row="7"
+                        Margin="5"
+                        x:Name="BTN_AVGCalories"
+                        Click="BTN_AVGCalories_OnClick"
+                        FontSize="16"
+                        Content="Avg calories"/>
+
+                <Button Grid.Row="8"
+                        Margin="5"
+                        x:Name="BTN_CountFruit"
+                        Click="BTN_CountFruit_OnClick"
+                        FontSize="16"
+                        Content="Count of fruits"/>
+
+                <Button Grid.Row="9"
+                        Margin="5"
+                        x:Name="BTN_CountVegetables"
+                        Click="BTN_CountVegetables_OnClick"
+                        FontSize="16"
+                        Content="Count of vegetables"/>
+
+                <Button Grid.Row="10"
+                        Margin="5"
+                        x:Name="BTN_ShowAllProdByColor"
+                        Click="BTN_ShowAllProdByColor_OnClick"
+                        FontSize="16"
+                        Content="Count vegetables by colors"/>
+                <Grid Grid.Row="11" Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Color:"
+                                   Background="LightGray"
+                                   FontSize="16"
+                                   TextAlignment="Center"
+                                   VerticalAlignment="Center"/>
+
+                        <TextBox x:Name="TB_Color"
+                                 Width="120"
+                                 Margin="2"
+                                 FontSize="16"/>
+                    </StackPanel>
+
+                    <Button Grid.Column="1"
+                            Margin="5, 0,5, 0"
+                            FontSize="11"
+                            x:Name="BTN_CountByColor" 
+                            Click="BTN_CountByColor_OnClick"
+                            Content="Find products"/>
+
+                </Grid>
+
+                <Grid Grid.Row="12" Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox x:Name="TB_ColorLess" 
+                             Width="120"
+                             Margin="2"
+                             FontSize="16"
+                             Grid.Column="1"/>
+
+                    <Button Margin="0, 0,5, 0"
+                              FontSize="11"
+                              x:Name="BTN_CountByCalless"
+                              Click="BTN_CountByCalless_OnClick"
+                              Content="Calories &lt;"/>
+                </Grid>
+                <Grid Grid.Row="13" Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox x:Name="TB_ColoriesMore"
+                             Width="120" 
+                             Margin="2"
+                             FontSize="16"
+                             Grid.Column="1"/>
+
+                    <Button Margin="0, 0,5, 0"
+                             FontSize="11"
+                             x:Name="BTN_CountByCaloriesMore"
+                             Click="BTN_CountByCaloriesMore_OnClick"
+                             Content="Calories &gt;"/>
+                </Grid>
+                <Grid Grid.Row="14">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Margin="5" x:Name="TB_LessCalories"></TextBox>
+
+                    <Button Grid.Column="1"
+                            Margin="5"
+                            x:Name="BTN_CaloriesBetween"
+                            Click="BTN_CaloriesBetween_OnClick"
+                            Content="&gt; Calories &gt;"/>
+                    <TextBox Grid.Column="2" Margin="5" x:Name="TB_MoreCalories"></TextBox>
+                </Grid>
+
+                <Button Grid.Row="15"
+                        Margin="5"
+                        x:Name="BTN_ShowAllProdColorYellowOrRed"
+                        Click="BTN_ShowAllProdColorYellowOrRed_OnClick"
+                        FontSize="12"
+                        Content="All red and yellow products"/>
+
+            </Grid>
+        </ScrollViewer>
+
+    </Grid>
+</Window>

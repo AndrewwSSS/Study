@@ -1,0 +1,14 @@
+﻿<Window x:Class="TextRedactor.AddLink"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextRedactor"
+        mc:Ignorable="d"
+        Title="AddLink" Height="128.36" Width="295.41" ResizeMode="NoResize">
+    <DockPanel>
+        <TextBlock Text="Link:" DockPanel.Dock="Left" VerticalAlignment="Center" FontSize="20" x:Name="TBLink"></TextBlock>
+        <Button Content="Save" DockPanel.Dock="Bottom" Margin="40, 0, 40, 0" Click="Button_Click"></Button>
+        <TextBox Margin="20" ></TextBox>
+    </DockPanel>
+</Window>

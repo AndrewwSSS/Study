@@ -1,0 +1,167 @@
+﻿<Window x:Class="_18._02._2022.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_18._02._2022"
+        mc:Ignorable="d"
+         Title="MainWindow" Height="467.181" Width="829.198" Background="#007acc" MinHeight="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <TabControl Grid.Row="0" Margin="10" x:Name="TabControl_Main"   SelectionChanged="TabControl_Main_OnSelectionChanged" >
+            <TabItem Width="100">
+                <TabItem.Header>
+                    <TextBlock Margin="3">Games</TextBlock>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <DataGrid 
+                              x:Name="DataGridGames"
+                              FontSize="15"
+                              AllowDrop="False"
+                              BorderThickness="0"
+                              SelectionMode="Single"
+                              CanUserDeleteRows="False"
+                              CanUserAddRows="False"
+                              IsReadOnly="True"
+                              AutoGenerateColumns="False"
+
+                    >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="50"
+                                                Binding="{Binding Id}"
+                                                Header="Id"/>
+                            <DataGridTextColumn Width="*"
+                                                Binding="{Binding Name}"
+                                                Header="Name"/>
+                            <DataGridTextColumn Width="170"
+                                                Binding="{Binding ReleaseDate}"
+                                                Header="Release Date"/>
+                            <DataGridTextColumn Width="80"
+                                                Binding="{Binding Platform}"
+                                                Header="Platform"/>
+                            <DataGridTextColumn Width="*"
+                                                Binding="{Binding Developer}"
+                                                Header="Developer"/>
+                            <DataGridTextColumn Width="*"
+                                                Binding="{Binding Distributor}"
+                                                Header="Distributor"/>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Width="100">
+                <TabItem.Header>
+                    <TextBlock Margin="3">Developers</TextBlock>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <DataGrid 
+                        x:Name="DataGridDevelopers"
+                        FontSize="15"
+                        AllowDrop="False"
+                        BorderThickness="0"
+                        SelectionMode="Single"
+                        CanUserDeleteRows="False"
+                        CanUserAddRows="False"
+                        IsReadOnly="True"
+                        AutoGenerateColumns="False"
+                    >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="50"
+                                                Binding="{Binding Id}"
+                                                Header="id"/>
+
+                            <DataGridTextColumn Width="*"
+                                                Binding="{Binding Name}"
+                                                Header="Name"/>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Width="100">
+                <TabItem.Header>
+                    <TextBlock Margin="3">Distributors</TextBlock>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <DataGrid 
+                        x:Name="DataGridDistributors"
+                        FontSize="15"
+                        AllowDrop="False"
+                        BorderThickness="0"
+                        SelectionMode="Single"
+                        CanUserDeleteRows="False"
+                        CanUserAddRows="False"
+                        IsReadOnly="True"
+                        AutoGenerateColumns="False"
+                    >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Id}" 
+                                                Header="Id"
+                                                Width="50"/>
+
+                            <DataGridTextColumn Binding="{Binding Name}"
+                                                Header="Name"
+                                                Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                </TabItem.Content>
+            </TabItem>
+            
+                
+            
+
+         
+        </TabControl>
+
+        <ScrollViewer Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Button 
+                    Grid.Row="2"
+                    Margin="5"
+                    Content="Update"
+                    x:Name="BTN_Update"
+                    Click="BTN_Update_OnClick"/>
+
+                <Button 
+                    Grid.Row="1"
+                    Margin="5"
+                    Content="Delete record"
+                    x:Name="BTN_DeleteRecord"
+                    Click="BTN_DeleteRecord_Click"/>
+
+                <Button 
+                    Grid.Row="3"
+                    Margin="5"
+                    Content="Add record"
+                    x:Name="BTN_AddRecord"
+                    Click="BTN_AddRecord_OnClick"/>
+
+                <Button 
+                    Grid.Row="4"
+                    Margin="5"
+                    Content="Update record"
+                    x:Name="BTN_UpdateRecord" Click="BTN_UpdateRecord_OnClick"></Button>
+                   
+
+
+                
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Window>

@@ -1,0 +1,121 @@
+﻿<Window x:Class="Multithreading4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Multithreading4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="911"
+        Background="CadetBlue">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+
+            <Button Grid.Column="0"
+                    Margin="70, 5"
+                    Content="Start"
+                    x:Name="BTN_Start"
+                    Click="BTN_Start_Click"
+                    FontSize="30"
+                    Foreground="BlueViolet"
+                    Background="Azure"/>
+
+            <Button Grid.Column="2"
+                    Margin="70, 5"
+                    Content="Refresh"
+                    x:Name="BTN_Refresh"
+                    Click="BTN_Refresh_Click"
+                    FontSize="30"
+                    Foreground="BlueViolet"
+                    Background="Azure"
+                    IsEnabled="False"/>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="Pairs"
+                       FontSize="40"
+                       Foreground="AliceBlue"
+                       FontWeight="Bold"/>
+
+            <TextBlock Grid.Row="0"
+                       Grid.Column="1"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="Sum pairs"
+                       FontSize="40"
+                       Foreground="AliceBlue"
+                       FontWeight="Bold"/>
+
+            <TextBlock Grid.Row="0"
+                       Grid.Column="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="Multiplication"
+                       FontSize="40"
+                       Foreground="AliceBlue"
+                       FontWeight="Bold"/>
+
+            <ListBox Grid.Row="1"
+                     Grid.Column="0"
+                     Margin="5"
+                     x:Name="LB_FirstPairs"
+                     Background="AliceBlue">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" FontSize="40"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <ListBox Grid.Row="1"
+                     Grid.Column="1"
+                     Margin="5"
+                     x:Name="LB_SecondPairs"
+                     Background="AliceBlue">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" FontSize="40"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <ListBox Grid.Row="1"
+                     Grid.Column="2"
+                     Margin="5"
+                     x:Name="LB_ThirdPairs"
+                     Background="AliceBlue">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" FontSize="40"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="DistributionDapper.Entities.ShowCustomersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DistributionDapper.Entities"
+        mc:Ignorable="d"
+        Title="ShowCustomersWindow" Height="379.944" Width="671.248">
+    <DataGrid Margin="5"
+              x:Name="MainDataGrid"
+              AutoGenerateColumns="False">
+        <DataGrid.Columns>
+            <DataGridTextColumn Width="40" Binding="{Binding id}" Header="id"></DataGridTextColumn>
+            <DataGridTextColumn Width="*" Binding="{Binding FirstName}" Header="FirstName"></DataGridTextColumn>
+            <DataGridTextColumn Width="*" Binding="{Binding SecondName}" Header="SecondName"></DataGridTextColumn>
+            <DataGridTextColumn Width="*" Binding="{Binding Patronymic}"  Header="Patronymic" ></DataGridTextColumn>
+            <DataGridCheckBoxColumn Width="35" Binding="{Binding Sex}"  Header="Sex"></DataGridCheckBoxColumn>
+            <DataGridTextColumn Width="*" Binding="{Binding DateOfbirth}"  Header="DateOfbirth"></DataGridTextColumn>
+            <DataGridTextColumn Width="*" Binding="{Binding CountryOfResidence}"  Header="CountryOfResidence"></DataGridTextColumn>
+            <DataGridTextColumn Width="*" Binding="{Binding Email}"  Header="Email"></DataGridTextColumn>
+        </DataGrid.Columns>
+    </DataGrid>
+</Window>

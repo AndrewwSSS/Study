@@ -1,0 +1,26 @@
+﻿<Window x:Class="_11._12._2021.SettingsOfDrawingAttributes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_11._12._2021"
+        mc:Ignorable="d"
+        Title="SettingsOfDrawingAttributes" Height="237.541" Width="279.917">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Color of feather:" TextAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 20, 0" FontSize="17"></TextBlock>
+            <Rectangle x:Name="ColorOfFether" Width="40" Height="40" Margin="0, 0, 10, 0"></Rectangle>
+            <Button Content="Select Color" Height="30" x:Name="BTNSelectColor" Click="BTNSelectColor_Click"></Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <TextBlock Text="Feather Width:" TextAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 20, 0" FontSize="17"></TextBlock>
+            <ComboBox  Width="110" Height="30"   Margin="0, 0, 10, 0" x:Name="FeatherWidth"></ComboBox>
+        </StackPanel>
+        <Button Grid.Row="3" Content="Save" x:Name="BTNSave" Click="BTNSave_Click"/>
+    </Grid>
+</Window>
