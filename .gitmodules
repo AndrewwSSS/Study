@@ -1,0 +1,3 @@
+[submodule "CalculatorWPF"]
+	path = CalculatorWPF
+	url = https://github.com/Andreww2281/CalculatorWPF.git
