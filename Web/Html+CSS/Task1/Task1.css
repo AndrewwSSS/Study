@@ -1,0 +1,18 @@
+#header{
+    text-align:center;
+    color: #4e64a9;
+}
+
+#mainDiv{
+    background-color: #f5f5f5;
+}
+
+.subHeader{
+    color: #6f8092;
+    font-size: 45;
+}
+
+
+body{
+    font-family: sans-serif;
+}

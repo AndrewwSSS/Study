@@ -1,0 +1,99 @@
+body {
+	background-color: #f5f5f5;
+}
+
+.main {
+	background-color: #9fcdcd;
+	border-radius: 15px;
+	height: 400px;
+	width: 600px;
+	margin: 0px auto;
+}
+
+.header {
+	position: relative;
+	background-color: #db6423;
+	width: 80%;
+	color: white;
+	font-size: 30px;
+	padding: 10px 0px;
+	padding-left: 70px;
+	left: -40px;
+	top: 40px;
+}
+
+.mainContent {
+	position: relative;
+	top: 80px;
+	display: flex;
+	flex-direction: row;
+}
+
+.inputSection {
+	display: flex;
+	flex-direction: column;
+}
+
+.largeInputSection {
+	width: 350px;
+	margin-bottom: 15px;
+}
+
+.inputCountainer {
+	display: flex;
+	flex-direction: column;
+	padding-left: 20px;
+}
+
+.baseInput {
+	background-color: #a9d2d2;
+	height: 40px;
+	color: #829fa0;
+	font-size: 20px;
+	border: 0px;
+	border-bottom: 2px solid #466c6f;
+	outline: 0px;
+}
+
+.baseInput::placeholder {
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+	color: #829fa0;
+	padding-left: 5px;
+}
+
+.subHeader {
+	margin-bottom: 5px;
+	height: 20px;
+}
+
+.smallInputsContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 350px;
+}
+
+.smallInputSection {
+	width: 110px;
+}
+
+.imgBlock {
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	right: 0px;
+	bottom: -29px;
+	overflow: hidden;
+	border-radius: 15px;
+}
+
+.moonImg {
+	position: absolute;
+	width: 100%;
+	right: -75px;
+	bottom: -39px;
+	height: 100%;
+	justify-self: end;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="horizontalContainer">
+			<div class="inputContainer">
+				<span> Group: </span>
+				<select id="select_Groups"></select>
+			</div>
+			<div class="inputContainer">
+				<span> Lesson: </span>
+				<select id="select_Lessons"></select>
+			</div>
+
+			<input type="button" value="select" id="Button_Select_Group" />
+		</div>
+
+		<div class="separator"></div>
+		<div id="mainContent">
+			<div class="horizontalContainer">
+				<span>Topic:</span>
+				<div id="LessonTopic"></div>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Is present</th>
+					</tr>
+				</thead>
+				<tbody id="mainTable"></tbody>
+			</table>
+			<input type="button" value="save" id="Button_Save" />
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>

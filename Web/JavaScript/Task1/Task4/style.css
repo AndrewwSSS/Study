@@ -1,0 +1,77 @@
+body {
+	background-color: #fbf2e9;
+	margin: 10px;
+}
+
+#booksContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+
+.bookContainer {
+	padding: 10px;
+	width: 180px;
+	min-height: 340px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #b9b5b1;
+	border-radius: 5px;
+	justify-content: space-between;
+}
+
+.bookContainer > span {
+	text-align: right;
+}
+
+.bookContainer > img {
+	width: 100%;
+	height: 240px;
+}
+
+.bookBuyContainer {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 280px;
+	border: 1px solid #b9b5b1;
+	border-radius: 5px;
+}
+
+#bookName {
+	border: 1px solid #b9b5b1;
+	background-color: #edede7;
+	border-radius: 5px;
+	color: #9b9888;
+	width: 100%;
+}
+
+.inputContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.fieldName {
+	width: 130px;
+}
+
+.bookBuyContainer_MainContent {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+#Button_Buy {
+	height: 20px;
+	margin-top: 10px;
+}
+
+#resultContainer {
+	display: none;
+	border: 1px solid #b9b5b1;
+	border-radius: 5px;
+	padding: 10px;
+}

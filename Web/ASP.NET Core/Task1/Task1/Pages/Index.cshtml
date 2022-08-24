@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+
+    @{
+            var Now = DateTime.Now.ToString();
+        }
+
+    <p>@Model.Text</p>
+
+    <p>Time from cshtml <b>@Now</b></p>
+    <p>Time from model: <b>@Model.TimeNow</b></p>
+    <p>@Model.AppConfiguration["Text"]</p>
+</div>

@@ -1,0 +1,78 @@
+body {
+	background-color: #f5f5f5;
+	margin: 0px;
+	font-size: 20px;
+}
+
+.main {
+	position: absolute;
+	margin-left: 150px;
+	margin-top: 0px;
+	width: 80%;
+	z-index: 2;
+}
+
+.menu {
+	top: 0px;
+	position: fixed;
+	height: 100%;
+	width: 60px;
+	background-color: #808080;
+	transition: width 0.5s;
+	z-index: 10;
+}
+
+.menu:hover {
+	width: 250px;
+}
+
+.menu:hover .menuItem {
+	width: 250px;
+	z-index: 10;
+}
+
+.menuItem {
+	background-color: #808080;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	z-index: 10;
+
+	display: flex;
+	transition: width 0.5s;
+}
+
+.menuItem:hover {
+	background-color: #5e5e5e;
+}
+
+.menuItemImg {
+	width: 60px;
+	height: 60px;
+}
+
+.imageContainer {
+	float: left;
+	vertical-align: middle;
+}
+
+.menuItemText {
+	font-size: 20px;
+	color: white;
+	margin-left: 20px;
+}
+
+.textContainer {
+	padding-top: 17px;
+}
+
+.menuItem::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.textMenu {
+	color: #f5f5f5;
+	margin-left: 7px;
+}

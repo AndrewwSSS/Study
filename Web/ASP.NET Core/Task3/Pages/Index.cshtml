@@ -1,0 +1,164 @@
+﻿@page "{id:int?}"
+@model IndexModel
+@{
+    
+    ViewData["Title"] = "Home page";
+    
+}
+@using Task3.Entities;
+
+
+
+@if(Model.CurrentId == 0)
+{
+
+    var parameters = Model.CurrParams;
+
+    <h1 class="text-center">Search and Filters params</h1>
+    <form class="params-container" method="post">
+        <div class="param-line">
+            <b>Price:</b>
+            <div class="input-container">
+               <label>From:</label>
+                @if(parameters != null) {
+                    <input type="text" name="SumFrom" value="@parameters.SumFrom">
+                }
+                else {
+                    <input type="text" name="SumFrom" value="0">
+                }
+               
+            </div>
+            <div class="input-container">
+               <label>To</label>
+               @if(parameters != null){
+                   <input type="text" name="SumTo" value="@parameters.SumTo">
+               }
+               else {
+                   <input type="text" name="SumTo">
+               }
+               
+            </div>
+        </div>
+        <div class="param-line">
+            <b>Type:</b>
+            <div class="input-container">
+
+                @if(parameters != null && parameters.ProductType == ProductType.Notebook){
+                    <input type="radio" class="radio-input" value="Notebook" name="ProductType" checked>
+                }
+                else {
+                    <input type="radio" class="radio-input" value="Notebook" name="ProductType">
+                }
+
+             
+                <label>Notebook</label>
+            </div>
+            <div class="input-container">
+                @if(parameters != null && parameters.ProductType == ProductType.Telephone){
+                    <input type="radio" class="radio-input" value="Telephone" name="ProductType" checked>
+                }
+                else {
+                    <input type="radio" class="radio-input" value="Telephone" name="ProductType">
+                }
+                
+                <label>Telephone</label>
+            </div>
+        </div>
+        <div class="filters-container">
+             <div class="param-line">
+                  <b>Sort by:</b>
+                  <div class="input-container">
+
+                    @if(parameters != null && parameters.SortType == SortType.ManufacturerAsc){
+                        <input type="radio" value="ManufacturerAsc" name="SortType" checked>
+                    }
+                    else {
+                        <input type="radio" value="ManufacturerAsc" name="SortType">
+                    }
+
+                    
+
+                     <lable>Manufacturer &#8593;</lable>
+                  </div>
+                  <div class="input-container">
+
+                       @if(parameters != null && parameters.SortType == SortType.ManufacturerDesc){
+                           <input type="radio" value="ManufacturerDesc" name="SortType" checked>
+                       }
+                       else {
+                           <input type="radio" value="ManufacturerDesc" name="SortType">
+                       }
+                        <lable>Manufacturer &#8595;</lable>
+                  </div>
+
+                   <div class="input-container">
+
+                      @if(parameters != null && parameters.SortType == SortType.PriceAsc){
+                          <input type="radio" value="PriceAsc" name="SortType" checked>
+                      }
+                      else {
+                          <input type="radio" value="PriceAsc" name="SortType">
+                      }
+                     
+                     <lable>Price &#8593;</lable>
+                  </div>
+                  <div class="input-container">
+                      @if(parameters != null && parameters.SortType == SortType.PriceDesc){
+                          <input type="radio" value="PriceDesc" name="SortType" checked>
+                      }
+                      else {
+                          <input type="radio" value="PriceDesc" name="SortType">
+                      }
+                      <lable>Price &#8595;</lable>
+                  </div>
+                  
+            </div>
+        </div>
+        <input type="submit" asp-page-handler="Submit" value="Search">
+    </form>
+
+
+
+    <div class="products-container">
+        @foreach(var product in Model.DisplaedProducts)
+        {
+            <a class="product-container nav-link text-black" href="/Index/@product.Id">
+                <div class="main-content">
+                    <img src="@product.ImgUrl" class="product-img"> 
+                </div>        
+                <h1>@product.Manufacturer @product.Name</h1>
+                <h3 class="price">@product.Price$</h3>
+            </a>
+        }
+    </div>
+
+    @if(Model.DisplaedProducts.Count == 0){
+        <h1 class="text-center">Not found!</h1>
+    }
+
+}else{
+
+    var product = Model.Context.Products.FirstOrDefault(p => p.Id == Model.CurrentId);
+
+    <div class="h-container">
+        <img src="@product.ImgUrl">
+        <div class="product-info">
+            <h1>@product.Manufacturer @product.Name</h1>
+            <h3>
+                @if(product.Description == null) {
+                    <text>No description</text>
+                }
+                else {
+                    <text>@product.Description</text>
+                }
+            </h3>
+            <h1>@product.Price$</h1>
+        </div>
+    </div> 
+    
+}
+
+
+
+
+

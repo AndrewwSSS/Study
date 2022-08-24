@@ -1,0 +1,50 @@
+body {
+	margin: 20px;
+	background-color: #fbf2e9;
+}
+
+.separator {
+	border-bottom: 1px solid #b9b8b6;
+	margin-top: 10px;
+}
+
+.horizontalContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+}
+
+.inputContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+}
+
+#mainContent {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+tr {
+	border-bottom: 1px solid #b9b8b6;
+}
+
+th {
+	width: 150px;
+	text-align: left;
+	padding: 5px 0;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+#LessonTopic {
+	background-color: #ffffff;
+	border-radius: 5px;
+	padding-left: 10px;
+	width: 100%;
+	border: 1px solid #b9b8b6;
+}

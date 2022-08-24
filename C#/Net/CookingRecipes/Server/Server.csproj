@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ClassesLibrary">
-      <HintPath>..\ClassesLibrary\bin\Debug\ClassesLibrary.dll</HintPath>
+      <HintPath>..\ClassesLibrary\obj\Debug\ClassesLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

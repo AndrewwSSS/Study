@@ -17,7 +17,7 @@ namespace Client
     {
         public ObservableCollection<string> Ingredients { get; set; } = new ObservableCollection<string>();
         public Socket socket;
-        public IPEndPoint ServerEndPoint = new IPEndPoint(IPAddress.Parse("26.246.72.11"), 1234);
+        public IPEndPoint ServerEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 1234);
 
         public MainWindow()
         {

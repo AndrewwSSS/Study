@@ -1,0 +1,17 @@
+body {
+	background-color: #fbf2e9;
+}
+
+#variantsContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.inputContainer {
+	display: flex;
+	flex-direction: row;
+}
+
+#nextButton {
+	width: 70px;
+}

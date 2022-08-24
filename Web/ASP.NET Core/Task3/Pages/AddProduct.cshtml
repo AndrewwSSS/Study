@@ -1,0 +1,49 @@
+﻿@page
+@model Task3.Pages.AddProductModel
+@{
+}
+@using Task3.Entities;
+
+<form method="post" class="form-container">
+	<div>
+		<label>Name</label>
+		<input type="text" name="Name"/>
+	</div>
+
+	<div>
+		<label>Description</label>
+		<input type="text" name="Description"/>
+	</div>
+
+	<div>
+		<label>Manufacturer</label>
+		<input type="text" name="Manufacturer"/>
+	</div>
+
+	<div>
+		<label>Price</label>
+		<input type="number" name="Price" value="0"/>
+	</div>
+
+	<div>
+		<label>Image url</label>
+		<input type="text" name="ImgUrl"/>
+	</div>
+
+	<div>
+		<label>Product type</label>
+		<select name="Type">
+			@foreach(var type in Enum.GetValues(typeof(ProductType))) {
+				
+				<option value="@type">
+					@type
+				</option>
+			}
+		</select>
+	</div>
+
+	<input type="submit" value="Add product"/>
+	
+
+</form>
+

@@ -1,0 +1,30 @@
+body{
+    background-color: #ed9eae;
+    font-family: sans-serif;
+}
+
+.listItem{
+    background-color: #c66376;
+    margin: 7px 0px;
+    padding: 7px 10px;
+}
+
+.productName{
+    background-color: #9e354a;
+    margin: 0px 0px;
+    padding: 7px 15px;
+
+}
+
+ol li::marker {
+    text-align: center;
+}
+
+
+.listProducts{
+    padding-left: 0px;
+    padding-right: 0px;
+    color: white;
+    background-color: #ed9eae;
+    list-style-position: inside;
+}

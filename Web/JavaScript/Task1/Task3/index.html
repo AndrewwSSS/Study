@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="verticalContainer">
+			<div class="horizontalContainer">
+				<div class="inputContainer">
+					<input type="checkbox" id="CheckBox_Bold" />
+					<span>Bold</span>
+				</div>
+				<div class="inputContainer">
+					<input type="checkbox" id="CheckBox_Underline" />
+					<span>Underline</span>
+				</div>
+				<div class="inputContainer">
+					<input type="checkbox" id="CheckBox_Italics" />
+					<span>Italics</span>
+				</div>
+				<div class="inputContainer">
+					<input type="radio" name="r" id="Radio_Left" checked />
+					<span>Left</span>
+				</div>
+				<div class="inputContainer">
+					<input type="radio" name="r" id="Radio_Right" />
+					<span>Right</span>
+				</div>
+				<div class="inputContainer">
+					<input type="radio" name="r" id="Radio_Justify" />
+					<span>Justify</span>
+				</div>
+			</div>
+			<textarea id="inputText" rows="10"></textarea>
+
+			<input type="button" id="ButtonShowText" value="Show text" />
+
+			<b id="resultHeader">Result:</b>
+			<div id="resultContainer"></div>
+		</div>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>

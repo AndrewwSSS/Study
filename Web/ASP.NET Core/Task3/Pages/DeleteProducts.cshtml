@@ -1,0 +1,25 @@
+﻿@page
+@model Task3.Pages.DeleteProductsModel
+@{
+}
+
+
+<h1 class="text-center">
+		Select product to edit
+	</h1>
+
+	<div class="products-container">
+        @foreach(var product in Model.Context.Products.ToList())
+        {
+            <div class="product-container nav-link text-black" href="/EditProducts/@product.Id">
+                <div class="main-content">
+                    <img src="@product.ImgUrl" class="product-img"> 
+                </div>        
+                <h1>@product.Manufacturer @product.Name</h1>
+                <form method="post">
+                    <input type="submit" value="Delete">
+                    <input type="hidden" value="@product.Id" name="Id">
+                </form>
+            </div>
+        }
+</div>

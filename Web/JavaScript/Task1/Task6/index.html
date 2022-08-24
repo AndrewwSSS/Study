@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="horizontalContainer">
+			<div class="inputContainer">
+				<span>Direction</span>
+				<select id="select_Direction"></select>
+			</div>
+			<div class="inputContainer">
+				<span>Date</span>
+				<select id="select_Dates"></select>
+			</div>
+			<input type="button" id="Button_Search" value="Search" />
+		</div>
+		<div class="separator"></div>
+		<div class="train">
+			<div id="places"></div>
+		</div>
+		<div class="horizontalContainer rightContainer">
+			<div class="inputContainer">
+				<span><b>Total price:</b></span>
+				<div id="currentPrice">
+					<b>0$</b>
+				</div>
+			</div>
+			<input type="button" value="Book" id="Button_Buy_Tickets" />
+		</div>
+
+		<div id="ticketsContainer">
+			<b>My tickets:</b>
+			<table>
+				<thead>
+					<tr>
+						<th>Direction</th>
+						<th>Date</th>
+						<th>Seat</th>
+					</tr>
+				</thead>
+
+				<tbody id="ticketsTable"></tbody>
+			</table>
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>

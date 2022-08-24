@@ -1,0 +1,17 @@
+body {
+    background-color: #f5f5f5;
+    font-family:sans-serif
+}
+
+.grayText {
+    color: #858197;
+}
+
+.blueText {
+    color: #4a1a9a;
+}
+
+
+.subHeader{
+    font-style: italic;
+}

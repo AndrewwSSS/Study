@@ -1,0 +1,19 @@
+body {
+	background: url(field.jpg) no-repeat;
+
+	background-size: 100%;
+
+	overflow: hidden;
+}
+
+#ball {
+	display: block;
+	position: absolute;
+
+	width: 100px;
+	height: 100px;
+	fill-opacity: 0;
+
+	transition-property: top left;
+	transition-duration: 1s;
+}

@@ -1,0 +1,90 @@
+body {
+	margin: 30px;
+	background-color: #fbf2e9;
+}
+
+.horizontalContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+}
+
+.inputContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+}
+
+.separator {
+	margin: 30px 0;
+	border-bottom: 1px solid #c3bfbc;
+}
+
+.train {
+	border-radius: 5px;
+	border: 1px solid #c3bfbc;
+	padding: 10px 5px;
+}
+
+#places {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 5px;
+	border: 1px solid #c3bfbc;
+	height: 100px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.placeContainer {
+	display: flex;
+	flex-direction: row;
+	padding: 0 5px;
+	height: 45%;
+	gap: 2px;
+	border: 1px solid #c3bfbc;
+	width: 5%;
+	justify-content: center;
+	align-items: center;
+}
+
+#Button_Search {
+	width: 100px;
+}
+
+.rightContainer {
+	justify-content: right;
+	margin-top: 15px;
+}
+
+#Button_Buy_Tickets {
+	width: 100px;
+}
+
+#ticketsContainer {
+	display: none;
+	margin-top: 30px;
+}
+
+tr {
+	border-bottom: 1px solid #b9b8b6;
+}
+
+th {
+	width: 150px;
+	text-align: left;
+	padding: 5px 0;
+}
+
+th {
+	border: 1px solid black;
+	border-collapse: collapse;
+	justify-content: center;
+	text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+	margin-top: 10px;
+}

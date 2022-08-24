@@ -1,0 +1,56 @@
+﻿@page "{id:int?}"
+@model Task5.Pages.EditFilmsModel
+@{
+}
+
+@if(Model.Id == null)
+{
+	<h1 class="text-center">Selet film to edit</h1>
+	<div class="container">
+		@foreach(var film in Model.Context.Films) {
+		<a class="v-container film text-black" href="/EditFilms/@film.Id">
+			<img src="@film.ImageUrl">
+			<h1 class="text-center">@film.Name</h1>
+			<h2 class="text-center">@film.PublishingYear</h2>
+		</a>
+	}
+	</div>
+
+}
+else{
+
+
+	var film = @Model.Context.Films.FirstOrDefault(f => Model.Id == f.Id);
+	if(film != null)
+	{
+		<form method="post" class="form-container">
+			<div>
+				<label>Name</label>
+				<input type="text" name="Name" value="@film.Name"/>
+			</div>
+			<div>
+				<label>Image url</label>
+				<input type="text" name="ImageUrl" value="@film.ImageUrl"/>
+			</div>
+			<div>
+				<label>Producer</label>
+				<input type="text" name="Producer" value="@film.Producer"/>
+			</div>
+			<div>
+				<label>Style</label>
+				<input type="text" name="Style" value="@film.Style"/>
+			</div>
+			<div>
+				<label>Description</label>
+				<input type="text" name="Description" value="@film.Description"/>
+			</div>
+			<div>
+				<label>Publishing Year</label>
+				<input type="number" name="PublishingYear" value="@film.PublishingYear"/>
+			</div>
+			<input type="submit" value="Edit"/>
+		</form>
+	}
+	
+
+}

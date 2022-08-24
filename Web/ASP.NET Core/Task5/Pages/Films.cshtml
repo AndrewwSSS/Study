@@ -1,0 +1,95 @@
+﻿@page "{FilmId:int?}"
+@using Microsoft.EntityFrameworkCore
+@model Task5.Pages.FilmsModel
+@{
+}
+
+
+@if(Model.FilmId == null){
+
+	<form method="post" class="search-container">
+		@if(Model.SearchString == null)	{
+			<input type="text" class="search-input" style="width:90%" placeholder="Search text..." name="Name">
+		}
+		else{
+			<input type="text" value="@Model.SearchString" class="search-input" style="width:90%" placeholder="Search text..." name="Name">
+		}
+
+		<input type="submit" value="Search">
+	</form>
+
+	<div class="container">
+		@foreach(var film in Model.DisplaydFilms) {
+		<a class="v-container film text-black" href="/Films/@film.Id">
+			<img src="@film.ImageUrl">
+			<h1 class="text-center">@film.Name</h1>
+			<h2 class="text-center">@film.PublishingYear</h2>
+		</a>
+	}
+	</div>
+
+}
+else {
+	var film = Model.Context.Films.Include(x => x.Seances).FirstOrDefault(f => f.Id == Model.FilmId);
+	if(film != null)
+	{
+		<a href="/Films/">
+			<h1>Back</h1>
+		</a>
+		<div class="h-container">
+			<img src="@film.ImageUrl">
+			<div class="v-container">
+				<h1>@film.Name</h1>
+				<h2>@film.PublishingYear</h2>
+				<h2>@film.Producer</h2>
+				<h2>@film.Style</h2>
+				<h3>@film.Description</h3>
+				<div>
+					<table>
+						<thead>
+							<tr>
+								<td>
+									<h1>
+										Time start
+									</h1>
+								</td>
+
+								<td>
+									<h1>
+										Time end
+									</h1>
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach(var seance in @film.Seances)
+							{
+								<tr>
+									<td>
+										<h2>
+											@seance.StartTime.ToString()
+										</h2>
+										
+									</td>
+									<td>
+										<h2>
+											@seance.EndTime.ToString()
+										</h2>
+										
+									</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+				
+			</div>
+		</div>
+	}
+	else{
+		<h1 class="text-center">Not found</h1>
+	}
+	
+}
+
+

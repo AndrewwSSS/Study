@@ -1,0 +1,180 @@
+.baseInput {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-radius: 5px;
+	border: 1px solid #c5c5c5;
+	padding: 5px 10px;
+	height: 30px;
+}
+
+.baseInput > input {
+	border: 0px;
+	font-size: 15px;
+	outline: 0px;
+	color: #c5c5c5;
+}
+
+.baseInput > input::placeholder {
+	color: #c5c5c5;
+}
+
+.validInput {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border: 1px solid #41ad49;
+	border-radius: 5px;
+	color: #41ad49;
+	padding: 5px 10px;
+	height: 30px;
+}
+
+.validInput > input {
+	border: 0px;
+	font-size: 15px;
+	outline: 0px;
+	color: #41ad49;
+}
+
+.validInput > input::placeholder {
+	color: #41ad49;
+}
+
+.validInput > img {
+	height: 20px;
+	width: 20px;
+	align-self: center;
+}
+
+.invalidInput {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border: 1px solid #e44061;
+	border-radius: 5px;
+	color: #e44061;
+	padding: 5px 10px;
+	height: 30px;
+}
+
+.invalidInput > input {
+	border: 0px;
+	font-size: 15px;
+	outline: 0px;
+	color: #e44061;
+}
+
+.invalidInput > input::placeholder {
+	color: #e44061;
+}
+
+.invalidInput > img {
+	height: 25px;
+	width: 20px;
+	align-self: center;
+}
+
+.checkBox {
+	display: flex;
+	flex-direction: row;
+	width: 40px;
+	height: 20px;
+	border-radius: 5px;
+	border-width: 1px;
+	padding: 1px;
+}
+
+.checkBox > .checker {
+	height: 100%;
+	width: 50%;
+	border-radius: 5px;
+}
+
+.validCheckBox {
+	color: #41ad49;
+	border: 1px solid #41ad49;
+}
+
+.validCheckBox > .checker {
+	background-color: #41ad49;
+}
+
+.checked {
+	justify-content: end;
+}
+
+.invalidCheckBox {
+	color: #e44061;
+	border: 1px solid #e44061;
+}
+
+.invalidCheckBox > .checker {
+	background-color: #e44061;
+}
+
+.baseButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 30px;
+	border-radius: 5px;
+	padding: 5px 10px;
+	color: white;
+}
+
+.activeButton {
+	background-color: #41ad49;
+}
+
+.activeButtonHover {
+	background-color: #2c7731;
+}
+
+.dangerButton {
+	background-color: #e44061;
+}
+
+.dangerButtonHover {
+	background-color: #97293f;
+}
+
+.disabledButton {
+	width: 100px;
+	background-color: #808080;
+}
+
+.circleButton {
+	border-radius: 50%;
+	width: 20px;
+	height: 30px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+textarea {
+	border-radius: 5px;
+	padding: 10px;
+	color: #c5c5c5;
+	outline: 0px;
+	width: max-content;
+}
+
+.radionButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	padding: 1px;
+	border: 1px solid #43ae4a;
+}
+
+.radioChecked > .checker {
+	border-radius: 50%;
+	background-color: #43ae4a;
+	height: 100%;
+	width: 100%;
+}

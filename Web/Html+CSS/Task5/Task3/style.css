@@ -1,0 +1,121 @@
+.body {
+	background-color: #f5f5f5;
+}
+
+.main {
+	padding-top: 50px;
+	min-width: 50px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.block {
+	width: 300px;
+	height: 500px;
+	position: relative;
+	display: flex;
+	background-color: #ffffff;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 6px 6px #c7c7c7;
+
+	transition: transform 1s;
+}
+
+.container {
+	text-align: center;
+	width: 100%;
+}
+
+.separator {
+	width: 100%;
+	margin: 0px;
+	display: block;
+	height: 4px;
+	border: 0;
+	border-top: 4px solid #ccc;
+}
+
+.greenHr {
+	border-color: #63bb34;
+}
+
+.greenButton {
+	background-color: #63bb34;
+}
+
+.goldHr {
+	border-color: #d7913b;
+}
+
+.goldButton {
+	background-color: #d7913b;
+}
+
+.redHr {
+	border-color: #c73756;
+}
+
+.redButton {
+	background-color: #c73756;
+}
+
+.blueButton {
+	background-color: #2b6689;
+}
+
+.blueHr {
+	border-color: #2b6689;
+}
+
+.productName {
+	font-size: 30px;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+.price {
+	margin-top: 8px;
+	font-size: 40px;
+	font-weight: bolder;
+}
+
+.perTime {
+	margin-top: 10px;
+	color: #d1d0d4;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.detailContainer {
+	margin-top: 25px;
+}
+
+.detail {
+	font-size: 25px;
+	color: black;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.button {
+	margin-top: 25px;
+	padding-top: 20px;
+	margin-left: 30%;
+	height: 40px;
+	width: 120px;
+	border-radius: 5px;
+	text-align: center;
+	align-content: center;
+	color: white;
+}
+
+.block:hover {
+	z-index: 10;
+	transform: scale(1.1, 1.1);
+}

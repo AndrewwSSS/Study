@@ -1,0 +1,25 @@
+﻿@page
+@model Task2.Pages.Task5Model
+@{
+}
+
+
+<table>
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Capital</td>
+			<td>Population</td>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var country in Model.Countries)
+		{
+			<tr>
+				<td>@country.Name</td>
+				<td>@country.Capital</td>
+				<td>@country.Population</td>
+			</tr>
+		}
+	</tbody>
+</table>

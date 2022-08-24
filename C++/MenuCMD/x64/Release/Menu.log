@@ -1,0 +1,19 @@
+﻿  Source.cpp
+E:\C++\MenuCMD\Menu.h(35,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+E:\C++\MenuCMD\Menu.h(38,1): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+E:\C++\MenuCMD\Menu.h(48,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+E:\C++\MenuCMD\Menu.h(62,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+E:\C++\MenuCMD\Menu.h(76,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+E:\C++\MenuCMD\Menu.h(87,1): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+E:\C++\MenuCMD\Menu.h(113,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+E:\C++\MenuCMD\Menu.h(119,1): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+E:\C++\MenuCMD\Menu.h(130,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+E:\C++\MenuCMD\Menu.h(176,1): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+E:\C++\MenuCMD\Menu.h(191,1): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+E:\C++\MenuCMD\Menu.h(131,7): warning C4101: tmp_i: неиспользованная локальная переменная
+  Создание кода
+  1 of 199 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  Menu.vcxproj -> E:\C++\MenuCMD\x64\Release\Menu.exe

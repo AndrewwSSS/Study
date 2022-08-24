@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="booksContainer">
+			<div class="bookContainer">
+				<img src="icons/1.jfif" />
+				<b>Computer programming</b>
+				<span>16$</span>
+				<input
+					type="button"
+					value="select"
+                    name="Computer programming"
+				/>
+			</div>
+
+			<div class="bookContainer">
+				<img src="icons/2.jfif" />
+				<b>Python programming</b>
+				<span>20$</span>
+				<input
+					type="button"
+					value="select"
+                    name="Python programming"
+				/>
+			</div>
+
+			<div class="bookContainer">
+				<img src="icons/3.jfif" />
+				<b>Codes at work</b>
+				<span>21$</span>
+				<input
+					type="button"
+					value="select"
+                    name="Codes at work"
+				/>
+			</div>
+
+			<div class="bookBuyContainer">
+                <div class="bookBuyContainer_MainContent">
+                    <div class="inputContainer">
+                        <div class="fieldName">Book:</div>
+                        <div id="bookName">Not selected</div>
+                    </div>
+                    <div class="inputContainer">
+                        <div class="fieldName">Quantity:</div>
+                        <input type="text" id="Input_Quantity"></input>
+                    </div>
+                     <div class="inputContainer">
+                        <div class="fieldName">Name:</div>
+                        <input type="text" id="Input_Name"></input>
+                    </div>
+                    <div class="inputContainer">
+                        <div class="fieldName">Delivery address:</div>
+                        <textarea id="Input_DeliveryAddress"></textarea>
+                    </div>
+
+                    <div class="inputContainer">
+                        <div class="fieldName">Delivery date:</div>
+                        <input type="date" id="Input_DeliveryDate">
+                    </div>
+
+                    <div class="inputContainer">
+                        <div class="fieldName">Comment:</div>
+                        <textarea id="Input_Comment"></textarea>
+                    </div>
+                </div>
+			
+                <button id="Button_Buy">buy</button>
+			</div>
+		</div>
+
+        <div id="resultContainer">
+            <div class="resultText"></div>
+        </div>
+        <script src="js/script.js"></script>
+	</body>
+</html>

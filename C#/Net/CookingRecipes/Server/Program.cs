@@ -83,11 +83,7 @@ namespace Server
                     
                 buffer = ms.ToArray();
 
-                ClientSocket.BeginSend(buffer, 0, buffer.Length, 0, SendCallBack, ClientSocket);
-                
-
                
-
             }
 
             List<string> RequestIngredientsNames;

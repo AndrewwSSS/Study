@@ -1,0 +1,2 @@
+E:\IT\Step\Class_Work\полезности С++\Menu\x64\Release\Menu.exe
+E:\C++\MenuCMD\x64\Release\Menu.exe

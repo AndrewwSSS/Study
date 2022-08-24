@@ -1,0 +1,15 @@
+body {
+	background-color: #fbf2e9;
+	margin: 20px;
+	font-size: 35px;
+}
+
+.separator {
+	margin: 15px 0px;
+	border-bottom: 2px solid #b0b0b0;
+}
+
+.textField {
+	width: 100%;
+	font-size: 30px;
+}

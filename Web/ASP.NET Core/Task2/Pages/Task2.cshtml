@@ -1,0 +1,20 @@
+﻿@page
+@model Task2.Pages.Task2Model
+@{
+}
+
+@{
+	var random = new Random();
+    char letter;
+	var b = random.Next(0, 2);
+
+    if (b == 0)
+        letter = (char)random.Next('\u0041', '\u005A'); 
+    else
+        letter = (char)random.Next('\u0061', '\u007A'); 
+
+
+
+
+}
+<b>Random letter: <h1>@letter</h1></b>

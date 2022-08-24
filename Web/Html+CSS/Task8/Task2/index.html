@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="InputElementsStyle.css" />
+	</head>
+	<body>
+		<div class="main">
+			<h2>
+				<b>Inputs</b>
+			</h2>
+
+			<div class="horizontalContainer">
+				<div class="baseInput">
+					<input placeholder="Enter some text" />
+				</div>
+
+				<div class="validInput">
+					<input placeholder="valid text" />
+					<img src="icons/valid.png" alt="valid img" />
+				</div>
+
+				<div class="invalidInput">
+					<input placeholder="invalid text" />
+					<img src="icons/invalid.png" alt="invlid img" />
+				</div>
+			</div>
+
+			<h2>
+				<b>Check boxes</b>
+			</h2>
+
+			<div class="horizontalContainer">
+				<div class="horizontalContainer checkBoxContainer">
+					<div class="checkBox validCheckBox">
+						<div class="checker"></div>
+					</div>
+					<span>Subscribe</span>
+				</div>
+
+				<div class="horizontalContainer checkBoxContainer">
+					<div class="checkBox invalidCheckBox checked">
+						<div class="checker"></div>
+					</div>
+					<span>Subscribe</span>
+				</div>
+			</div>
+
+			<h2>
+				<b>Radio buttons</b>
+			</h2>
+
+			<div class="horizontalContainer">
+				<span>Gender:</span>
+				<div class="horizontalContainer checkBoxContainer">
+					<div class="radionButton">
+						<div class="checker"></div>
+					</div>
+					<span>Male</span>
+				</div>
+
+				<div class="horizontalContainer checkBoxContainer">
+					<div class="radionButton validRadioButton radioChecked">
+						<div class="checker"></div>
+					</div>
+					<span>Female</span>
+				</div>
+			</div>
+
+			<h2>
+				<b>Buttons</b>
+			</h2>
+
+			<div class="horizontalContainer">
+				<div class="baseButton activeButton">Active</div>
+				<div class="baseButton activeButtonHover">Hover</div>
+				<div class="baseButton dangerButton activeButtonHover">
+					Danger
+				</div>
+				<div class="baseButton dangerButtonHover">Hover</div>
+				<div class="baseButton disabledButton">Disabled</div>
+				<div class="baseButton circleButton activeButton">+</div>
+				<div class="baseButton circleButton dangerButton">-</div>
+			</div>
+
+			<h2>
+				<b>Text area</b>
+			</h2>
+
+			<textarea placeholder="enter some text..."></textarea>
+		</div>
+	</body>
+</html>

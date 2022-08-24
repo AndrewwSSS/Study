@@ -1,0 +1,45 @@
+body {
+	margin: 20px;
+	background-color: #fbf2e9;
+}
+
+#resultContainer {
+	display: none;
+	flex-direction: column;
+	gap: 10px;
+	border-radius: 5px;
+	border: 1px solid #8a8a8a;
+	min-height: 100px;
+	padding: 10px;
+	font-size: 30px;
+}
+
+#resultHeader {
+	display: none;
+}
+
+#inputText {
+	padding: 10px;
+}
+
+.horizontalContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.inputContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 1px;
+}
+
+.verticalContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+#ButtonShowText {
+	width: 100%;
+}

@@ -1,0 +1,46 @@
+﻿@page
+@using Microsoft.EntityFrameworkCore
+@model Task4.Pages.DeleteBooksModel
+@{
+}
+
+<script>
+	let form;
+	$(document).ready(function () {
+        $("form[method='post']").click(function(e) {
+            e.preventDefault();
+            form = $(e)[0].currentTarget;
+            $("#modal-w").css("display", "flex");
+		})
+
+        $("#BTN_Yes").click(function() {
+			form.submit();
+            $("#modal-w").hide();
+		})
+
+		$("#BTN_No").click(function() {
+            $("#modal-w").hide();
+		})
+	});
+
+</script>
+
+<div class="container">
+    @foreach(var book in Model.Context.Books.Include(x => x.Author))
+    {
+        <div class="book text-black" href="/Index/@book.Id" >
+            <img src="@book.ImgUrl">
+            <span class="text-center">@book.Name</span>
+            <span class="text-center">@book.Author.Name @book.Author.Surname @book.Author.Patronymic</span>
+            <span class="text-center">@book.YearOfPublishing</span>
+            <span class="text-center">@book.PublishingHouse</span>
+            <form  method="post">
+                <input type="submit" value="Delete" style="width:100%;">
+			    <input type="hidden" value="@book.Id" name="Id"> 
+            </form>
+        </div>    
+    }
+
+</div>
+
+

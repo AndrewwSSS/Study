@@ -1,0 +1,43 @@
+body {
+	background-color: #add8e6;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 20px;
+}
+
+.main {
+	padding: 40px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.block {
+	display: table;
+	position: relative;
+	margin-bottom: 30px;
+	height: fit-content;
+}
+
+.blockImg {
+	display: block;
+	width: 100%;
+}
+
+.contentText {
+	background-color: white;
+	width: 100%;
+}
+
+.text {
+	margin: 0px 20px;
+}
+
+.contentText {
+	padding: 20px 0px;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	width: 32%;
+}

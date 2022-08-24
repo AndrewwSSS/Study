@@ -1,0 +1,57 @@
+﻿@page "{id:int?}"
+@using Microsoft.EntityFrameworkCore
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+
+@if (Model.Id == null)
+{
+    <form class="search-container" method="post">
+        @if (Model.SearchString == null) {
+            <input type="text" class="search-input" placeholder="Enter search string..." name="Name">
+        }
+        else {
+            <input type="text" value="@Model.SearchString" class="search-input" placeholder="Enter search string..." name="Name">
+        }
+
+        <input type="submit" value="Search">
+    </form>
+
+    <div class="container">
+        @foreach(var book in Model.DisplayedBooks)
+        {
+             <a class="book text-black" href="/Index/@book.Id" >
+                <img src="@book.ImgUrl">
+                <span class="text-center">@book.Name</span>
+                <span class="text-center">@book.Author.Name @book.Author.Surname @book.Author.Patronymic</span>
+                <span class="text-center">@book.YearOfPublishing</span>
+                <span class="text-center">@book.PublishingHouse</span>
+            </a>    
+        }
+
+    </div>
+
+}
+else {
+    var book = Model.Context.Books.Include(x => x.Author).FirstOrDefault(b => b.Id == Model.Id);
+
+    <h2><a href="/Index/">Back</a></h2>
+    <div class="h-container">
+        <img src="@book.ImgUrl">
+        <div class="book">
+             <h1 class="text-center">@book.Name</h1>
+             <h2 class="text-center">@book.Author.Name @book.Author.Surname @book.Author.Patronymic</h2>
+             <b class="text-center">@book.YearOfPublishing</b>
+             <h3 class="text-center">@book.PublishingHouse</h3>
+        </div>
+    </div>
+
+}
+
+
+
+
+

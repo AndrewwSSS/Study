@@ -1,0 +1,6 @@
+C:\Programming\Study\C#\Net\CookingRecipes\ClassesLibrary\bin\Debug\ClassesLibrary.dll
+C:\Programming\Study\C#\Net\CookingRecipes\ClassesLibrary\bin\Debug\ClassesLibrary.pdb
+C:\Programming\Study\C#\Net\CookingRecipes\ClassesLibrary\obj\Debug\ClassesLibrary.csproj.AssemblyReference.cache
+C:\Programming\Study\C#\Net\CookingRecipes\ClassesLibrary\obj\Debug\ClassesLibrary.csproj.CoreCompileInputs.cache
+C:\Programming\Study\C#\Net\CookingRecipes\ClassesLibrary\obj\Debug\ClassesLibrary.dll
+C:\Programming\Study\C#\Net\CookingRecipes\ClassesLibrary\obj\Debug\ClassesLibrary.pdb

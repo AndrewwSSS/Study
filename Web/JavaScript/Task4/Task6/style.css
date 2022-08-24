@@ -1,0 +1,15 @@
+.tooltip {
+	position: fixed;
+	padding: 5px 20px;
+	text-align: center;
+	font: italic 14px/1.3 sans-serif;
+	color: white;
+	background: #8a53a9;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}

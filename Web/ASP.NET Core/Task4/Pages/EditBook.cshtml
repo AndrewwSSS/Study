@@ -1,0 +1,68 @@
+﻿@page "{Id:int?}"
+@model Task4.Pages.EditBookModel
+@{
+}
+@using Microsoft.EntityFrameworkCore;
+
+@if(Model.Id == null)
+{
+	<h1 class="text-center">Select book to edit</h1>
+	<div class="container">
+        @foreach(var book in Model.Context.Books.Include(x => x.Author))
+        {
+            <a class="book text-black" href="/EditBook/@book.Id" >
+                <img src="@book.ImgUrl">
+                <span class="text-center">@book.Name</span>
+                <span class="text-center">@book.Author.Name @book.Author.Surname @book.Author.Patronymic</span>
+                <span class="text-center">@book.YearOfPublishing</span>
+                <span class="text-center">@book.PublishingHouse</span>
+            </a>    
+        }
+
+	</div>
+}
+else
+{
+	var book = @Model.Context.Books.Include(x => x.Author).FirstOrDefault(b => b.Id == Model.Id);
+	<form method="post" class="form-container">
+	<div>
+		<label>Name</label>
+		<input type="text" value="@book.Name" name="Name"/>
+	</div>
+	<div>
+		<label>Img url</label>
+		<input type="text"  value="@book.ImgUrl" name="ImgUrl"/>
+	</div>
+
+	<div>
+		<label>Author Name</label>
+		<input type="text" value="@book.Author.Name" name="Author.Name"/>
+	</div>
+
+	<div>
+		<label>Author Surname</label>
+		<input type="text" value="@book.Author.Surname" name="Author.Surname"/>
+	</div>
+
+	<div>
+		<label>Author Patronymic</label>
+		<input type="text" value="@book.Author.Patronymic" name="Author.Patronymic"/>
+	</div>
+
+	<div>
+		<label>Style</label>
+		<input type="text" value="@book.Style" name="Style"/>
+	</div>
+	<div>
+		<label>PublishingHouse</label>
+		<input type="text" value="@book.PublishingHouse" name="PublishingHouse"/>
+	</div>
+	<div>
+		<label>YearOfPublishing</label>
+		<input type="number" value="@book.YearOfPublishing" name="YearOfPublishing"/>
+	</div>
+
+	<input type="submit" value="Edit"/>
+
+</form>
+}

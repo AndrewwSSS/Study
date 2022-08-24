@@ -1,0 +1,8 @@
+.dotted {
+	text-decoration: underline dotted;
+}
+
+body {
+	background-color: #fbf2e9;
+	font-size: 40px;
+}

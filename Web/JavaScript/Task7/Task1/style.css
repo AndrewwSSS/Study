@@ -1,0 +1,55 @@
+body {
+	background-color: #fbf2e9;
+	margin: 20px;
+}
+
+.v-container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 46%;
+}
+
+.h-container {
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+}
+
+.head-container {
+	display: flex;
+	flex-direction: row;
+	font-size: 25px;
+	justify-content: space-between;
+	height: 30px;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.inputArea {
+	height: 600px;
+	resize: none;
+	outline: 0;
+	padding: 10px;
+	font-size: 20px;
+}
+
+#submit {
+	height: 620px;
+	width: 3%;
+	font-size: 40px;
+	margin-top: 40px;
+}
+
+.input-container {
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+}
+
+.errorMessage {
+	color: red;
+	font-size: 25px;
+}

@@ -1,0 +1,15 @@
+.horizontalContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	justify-content: start;
+	align-items: center;
+}
+
+.checkBoxContainer {
+	gap: 5px;
+}
+
+.main {
+	padding: 10px 30px;
+}

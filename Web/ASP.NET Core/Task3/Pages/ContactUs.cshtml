@@ -1,0 +1,24 @@
+﻿@page
+@model Task3.Pages.ContactUsModel
+@{
+}
+
+
+<form class="form-container" method="post" id="MainForm">
+	
+	<div>
+		<label>Your name</label>
+		<input type="text" name="Name"/>
+		<label>Your Surname</label>
+		<input type="text" name="Surname"/>
+	</div>
+
+	<div>
+		<label>Your mail</label>
+		<input type="text" name="Mail" style="width:100%;"/>
+	</div>
+
+	<textarea name="Text"></textarea>
+
+	<input type="submit" value="Send"/>
+</form>

@@ -1,0 +1,21 @@
+body {
+	background-color: #fbf2e9;
+	font-size: 30px;
+}
+
+ul {
+	margin-left: 40px;
+	list-style-type: none;
+}
+
+.folder {
+	list-style-type: circle;
+}
+
+.file {
+	list-style-type: square;
+}
+
+.root {
+	list-style-type: disc;
+}

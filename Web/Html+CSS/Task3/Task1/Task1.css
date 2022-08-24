@@ -1,0 +1,41 @@
+.product{
+    width: 125px;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    float: left;
+}
+
+
+.productName{
+    font-size: 20px;
+    text-align: center;
+}
+
+.productImg{
+    text-align: center;
+}
+
+.header{
+    text-align: center;
+    margin-top: 17px;
+    margin-bottom: 13px;
+}
+
+footer{
+    margin-top: 10px;
+    text-align: center;
+}
+
+body{
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+
+.Products::after{
+   content: "";
+   clear: both;
+   display: block;
+}

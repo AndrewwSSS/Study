@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<style>
+			.loader {
+				border: 16px solid #f3f3f3; /* Light grey */
+				border-top: 16px solid #3498db; /* Blue */
+				border-radius: 50%;
+				width: 120px;
+				height: 120px;
+				animation: spin 2s linear infinite;
+			}
+
+			@keyframes spin {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+
+			#userBlock {
+				margin: 0 auto;
+				width: 300px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+
+			#avatar {
+				align-self: center;
+			}
+			.properties {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			.prop {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="users"></ul>
+
+		<div id="userBlock">
+			<img id="avatar" />
+			<div id="properties"></div>
+		</div>
+
+		<script>
+			$(document).ready(function () {
+				var currentUrl = new URL(window.location.href);
+				var login = currentUrl.searchParams.get("login");
+
+				if (login != null) {
+					$.ajax({
+						method: "GET",
+						url: `https://api.github.com/users/${login}`,
+						async: true,
+						dataType: "JSON",
+						success: function (user) {
+							avatar.src = `${user.avatar_url}`;
+
+							let prop = document.createElement("div");
+							prop.className = "prop";
+							prop.innerHTML = `<b>Name:</b><span>${user.name}</span>`;
+
+							properties.append(prop);
+
+							prop = document.createElement("div");
+							prop.className = "prop";
+							prop.innerHTML = `<b>Login:</b><span>${user.login}</span>`;
+
+							properties.append(prop);
+
+							prop = document.createElement("div");
+							prop.className = "prop";
+							prop.innerHTML = `<b>Url to github:</b><a href="${user.html_url}">${user.html_url}</a>`;
+
+							properties.append(prop);
+
+							prop = document.createElement("div");
+							prop.className = "prop";
+							prop.innerHTML = `<b>Blog:</b><a href="${user.blog}">${user.blog}</a>`;
+
+							properties.append(prop);
+
+							prop = document.createElement("div");
+							prop.className = "prop";
+							prop.innerHTML = `<b>City:</b><span>${user.location}</span>`;
+
+							properties.append(prop);
+
+							prop = document.createElement("div");
+							prop.className = "prop";
+							prop.innerHTML = `<b>Email:</b><span>${user.email}</span>`;
+
+							properties.append(prop);
+						},
+					});
+				} else {
+					$("#userBlock").hide();
+
+					$.ajax({
+						method: "GET",
+						url: "https://api.github.com/users",
+						async: true,
+						dataType: "JSON",
+
+						success: function (res) {
+							res.sort((a, b) => {
+								let x = a.login.toLowerCase();
+								let y = b.login.toLowerCase();
+								return x > y ? 1 : -1;
+							});
+
+							for (const user of res) {
+								let li = document.createElement("li");
+								li.innerHTML = `<a href="${window.location.href}?login=${user.login}" target="_blank">${user.login}</a>`;
+								users.append(li);
+							}
+						},
+						error: function (e) {
+							console.error(e.value);
+						},
+					});
+				}
+			});
+		</script>
+	</body>
+</html>

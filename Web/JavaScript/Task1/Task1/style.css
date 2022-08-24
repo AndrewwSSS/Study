@@ -1,0 +1,58 @@
+.messageBox {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #9b9a99;
+}
+
+.messageInfo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-bottom: 1px solid #9b9a99;
+	padding: 10px 15px;
+}
+
+.messageContent {
+	padding: 10px 15px;
+}
+
+body {
+	background-color: #fbf2e9;
+	margin: 15px;
+}
+
+#messagesContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+#addMessageContainer {
+	margin-top: 20px;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+}
+
+.inputContainer {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+}
+
+.inputContainer > .input {
+	flex-grow: 1;
+}
+
+.inputContainer > b {
+	margin-right: 5px;
+	width: 100px;
+}
+
+.sendBTN {
+	margin-top: 10px;
+	flex-grow: 1;
+	width: 100%;
+}

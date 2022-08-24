@@ -1,0 +1,11 @@
+C:\Programming\Study\C#\Net\CookingRecipes\Server\bin\Debug\Server.exe.config
+C:\Programming\Study\C#\Net\CookingRecipes\Server\bin\Debug\Server.exe
+C:\Programming\Study\C#\Net\CookingRecipes\Server\bin\Debug\Server.pdb
+C:\Programming\Study\C#\Net\CookingRecipes\Server\bin\Debug\ClassesLibrary.dll
+C:\Programming\Study\C#\Net\CookingRecipes\Server\bin\Debug\ClassesLibrary.pdb
+C:\Programming\Study\C#\Net\CookingRecipes\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Programming\Study\C#\Net\CookingRecipes\Server\obj\Debug\Server.csproj.SuggestedBindingRedirects.cache
+C:\Programming\Study\C#\Net\CookingRecipes\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Programming\Study\C#\Net\CookingRecipes\Server\obj\Debug\Server.csproj.CopyComplete
+C:\Programming\Study\C#\Net\CookingRecipes\Server\obj\Debug\Server.exe
+C:\Programming\Study\C#\Net\CookingRecipes\Server\obj\Debug\Server.pdb

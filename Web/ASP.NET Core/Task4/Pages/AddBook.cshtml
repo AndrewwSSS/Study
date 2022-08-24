@@ -1,0 +1,47 @@
+﻿@page
+@model Task4.Pages.AddBookModel
+@{
+}
+
+
+<form method="post" class="form-container">
+	<div>
+		<label>Name</label>
+		<input type="text" name="Name"/>
+	</div>
+	<div>
+		<label>Img url</label>
+		<input type="text" name="ImgUrl"/>
+	</div>
+
+	<div>
+		<label>Author Name</label>
+		<input type="text" name="Author.Name"/>
+	</div>
+
+	<div>
+		<label>Author Surname</label>
+		<input type="text" name="Author.Surname"/>
+	</div>
+
+	<div>
+		<label>Author Patronymic</label>
+		<input type="text" name="Author.Patronymic"/>
+	</div>
+
+	<div>
+		<label>Style</label>
+		<input type="text" name="Style"/>
+	</div>
+	<div>
+		<label>PublishingHouse</label>
+		<input type="text" name="PublishingHouse"/>
+	</div>
+	<div>
+		<label>YearOfPublishing</label>
+		<input type="number"  name="YearOfPublishing"/>
+	</div>
+
+	<input type="submit" value="Add"/>
+
+</form>

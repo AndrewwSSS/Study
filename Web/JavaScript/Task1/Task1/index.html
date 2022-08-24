@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="messagesContainer">
+			<div class="messageBox">
+				<div class="messageInfo">
+					<span>Name</span>
+					<span>10:05:00 22.03.2018</span>
+				</div>
+				<div class="messageContent">
+					<span
+						>Lorem ipsum dolor sit, amet consectetur adipisicing
+						elit. Nihil eius ipsa quibusdam quis temporibus, impedit
+						delectus atque pariatur earum cumque.</span
+					>
+				</div>
+			</div>
+		</div>
+
+		<form id="addMessageContainer" action="#">
+			<b class="header">Add new message</b>
+			<div class="inputContainer">
+				<b>Your name:</b>
+				<input class="input" id="LocalName" />
+			</div>
+			<div class="inputContainer">
+				<b>Your message:</b>
+				<textarea class="input" id="LocalMessage"></textarea>
+			</div>
+			<input type="submit" value="Send" class="sendBTN" />
+		</form>
+		<script src="js/script.js"></script>
+	</body>
+</html>

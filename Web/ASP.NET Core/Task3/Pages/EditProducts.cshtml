@@ -1,0 +1,83 @@
+﻿@page "{id:int?}"
+@model Task3.Pages.EditProductsModel
+@{
+}
+@using Task3.Entities;
+
+@if(Model.Id == null){
+	<h1 class="text-center">
+		Select product to edit
+	</h1>
+
+	<div class="products-container">
+        @foreach(var product in Model.Context.Products.ToList())
+        {
+            <a class="product-container nav-link text-black" href="/EditProducts/@product.Id">
+                <div class="main-content">
+                    <img src="@product.ImgUrl" class="product-img"> 
+                </div>        
+                <h1>@product.Manufacturer @product.Name</h1>
+            </a>
+        }
+    </div>
+}
+else{
+	
+    var product = Model.Context.Products.FirstOrDefault(p => p.Id == Model.Id);
+
+    <form method="post" class="form-container">
+		<div>
+			<label>Name</label>
+			<input type="text" name="Name" value="@product.Name"/>
+		</div>
+
+		<div>
+			<label>Description</label>
+			<input type="text" name="Description" value="@product.Description"/>
+		</div>
+
+		<div>
+			<label>Manufacturer</label>
+			<input type="text" name="Manufacturer" value="@product.Manufacturer"/>
+		</div>
+
+		<div>
+			<label>Price</label>
+			<input type="number" name="Price" value="@product.Price"/>
+		</div>
+
+		<div>
+			<label>Image url</label>
+			<input type="text" name="ImgUrl" value="@product.ImgUrl"/>
+		</div>
+
+		<div>
+			<label>Product type</label>
+			<select name="Type">
+			
+				@foreach(ProductType type in Enum.GetValues(typeof(ProductType))) {
+
+					@if(type == @product.Type)
+					{
+						<option value="@type" selected>
+							@type
+						</option>
+					}
+					else
+					{
+						<option value="@type">
+							@type
+						</option>
+					}
+					
+				}
+			</select>
+		</div>
+
+		<input type="hidden" value="@Model.Id" name="Id">
+
+		<input type="submit" value="Save"/>
+    </form>
+
+
+}

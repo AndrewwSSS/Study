@@ -1,0 +1,153 @@
+body {
+	margin: 0px;
+}
+
+.main {
+	padding: 30px;
+}
+
+.content {
+	display: flex;
+	flex-direction: row;
+}
+
+.registrationForm {
+	width: 50%;
+	padding: 10px;
+}
+
+.personalDatails {
+	width: 50%;
+	padding: 10px;
+}
+
+.header {
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+
+.verticalContainer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+	width: 100%;
+	gap: 20px;
+}
+
+.inputContainer {
+	height: 48px;
+	display: flex;
+	flex-direction: row;
+}
+
+.baseInput {
+	border: 0px;
+	border-bottom: 1px solid #a3a3a3;
+	flex-grow: 1;
+	outline: 0px;
+	font-size: 15px;
+	padding-left: 10px;
+}
+
+.baseInput::placeholder {
+	padding-left: 5px;
+}
+
+.passwordsContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	flex-grow: 1;
+}
+
+.personalDetailsContainer {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.personalDetailsContainer > .inputContainer {
+	width: 45%;
+}
+
+.confirmationsContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin-top: 30px;
+}
+
+.confirmationContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	margin-left: 10px;
+}
+
+.separator {
+	border: 0px;
+	border-bottom: 1px solid #ededed;
+}
+
+.footerContent {
+	display: flex;
+	justify-content: flex-end;
+	padding: 20px 50px;
+}
+
+.submitButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	width: 150px;
+	height: 40px;
+	background-color: #008b8b;
+	color: white;
+}
+
+.PasswordInputContainer {
+	height: 48px;
+	display: flex;
+	flex-direction: row;
+}
+
+.PasswordInputContainer > img {
+	height: 48px;
+	width: 48px;
+}
+
+@media (max-width: 900px) {
+	.content {
+		flex-direction: column;
+	}
+
+	.personalDatails {
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 600px) {
+	.passwordsContainer {
+		flex-direction: column;
+	}
+
+	.personalDetailsContainer > .inputContainer {
+		width: 90%;
+	}
+
+	.registrationForm {
+		width: 100%;
+	}
+
+	.personalDatails {
+		width: 100%;
+	}
+
+	.PasswordInputContainer {
+		height: 96px;
+	}
+}

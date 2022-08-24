@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<User>
+		<Login>maf1ozn1k2281</Login>
+		<Mail>aboba@gmail.com</Mail>
+		<Telephone>0507351190</Telephone>
+		<Password>Aboba</Password>
+	</User>
+</ArrayOfUser>

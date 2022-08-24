@@ -1,0 +1,46 @@
+﻿@page
+@model Task5.Pages.DeleteFilmsModel
+@{
+}
+
+
+<script>
+
+	let form;
+	$(document).ready(function () {
+        $("form[method='post']").click(function(e) {
+            e.preventDefault();
+            form = $(e)[0].currentTarget;
+            $("#modal-w").css("display", "flex");
+		})
+
+        $("#BTN_Yes").click(function() {
+			form.submit();
+            $("#modal-w").hide();
+		})
+
+		$("#BTN_No").click(function() {
+            $("#modal-w").hide();
+		})
+
+	});
+	
+</script>
+
+
+
+<div class="container">
+	@foreach(var film in Model.Context.Films) {
+	<div class="v-container film text-black" href="/Films/@film.Id">
+		<img src="@film.ImageUrl">
+		<h1 class="text-center">@film.Name</h1>
+		<h2 class="text-center">@film.PublishingYear</h2>
+		<form method="post" asp-antiforgery="false">
+			<input type="submit" value="Delete" style="width:100%;">
+			<input type="hidden" value="@film.Id" name="Id"> 
+		</form>
+	</div>
+}
+</div>
+
+

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Product>
+		<Name>Legion 1</Name>
+		<Description>Lorem dolor sit, consectetur adipiscing elit</Description>
+		<Manufacturer>Lenovo</Manufacturer>
+		<Price>1400</Price>
+		<ImgUrl>https://content.rozetka.com.ua/goods/images/big_tile/163386254.jpg</ImgUrl>
+		<Type>Notebook</Type>
+	</Product>
+	<Product>
+		<Name>1</Name>
+		<Description>Lorem ipsum dolor sit amet, consectetur  elit</Description>
+		<Manufacturer>Asus</Manufacturer>
+		<Price>1003</Price>
+		<ImgUrl>https://content.rozetka.com.ua/goods/images/big_tile/252192898.jpg</ImgUrl>
+		<Type>Notebook</Type>
+	</Product>
+	<Product>
+		<Name>Mac book air</Name>
+		<Description>Lorem ipsum dolor sit amet</Description>
+		<Manufacturer>Apple</Manufacturer>
+		<Price>1300</Price>
+		<ImgUrl>https://content1.rozetka.com.ua/goods/images/big_tile/144249716.jpg</ImgUrl>
+		<Type>Notebook</Type>
+	</Product>
+	<Product>
+		<Name>Legion 2</Name>
+		<Description>Lorem amet, consectetur adipiscing elit</Description>
+		<Manufacturer>Lenovo</Manufacturer>
+		<Price>1000</Price>
+		<ImgUrl>https://content2.rozetka.com.ua/goods/images/big_tile/274267981.jpg</ImgUrl>
+		<Type>Notebook</Type>
+	</Product>
+	<Product>
+		<Name>Vivobook</Name>
+		<Manufacturer>Asus</Manufacturer>
+		<Price>700</Price>
+		<ImgUrl>https://content2.rozetka.com.ua/goods/images/big_tile/275080610.jpg</ImgUrl>
+		<Type>Notebook</Type>
+	</Product>
+	<Product>
+		<Name>8</Name>
+		<Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Description>
+		<Manufacturer>Redmi</Manufacturer>
+		<Price>400</Price>
+		<ImgUrl>https://content.rozetka.com.ua/goods/images/big_tile/272640412.jpg</ImgUrl>
+		<Type>Telephone</Type>
+	</Product>
+	<Product>
+		<Name>Iphone 10R</Name>
+		<Description>ipsum dolor sit amet, consectetur elit</Description>
+		<Manufacturer>Apple</Manufacturer>
+		<Price>2000</Price>
+		<ImgUrl>https://content.rozetka.com.ua/goods/images/big_tile/37399220.jpg</ImgUrl>
+		<Type>Telephone</Type>
+	</Product>
+	<Product>
+		<Name>9 pro</Name>
+		<Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Description>
+		<Manufacturer>OnePlus</Manufacturer>
+		<Price>500</Price>
+		<ImgUrl>https://content2.rozetka.com.ua/goods/images/big_tile/236679737.jpg</ImgUrl>
+		<Type>Telephone</Type>
+	</Product>
+	<Product>
+		<Name>9</Name>
+		<Description>Lorem amet, consectetur adipiscing elit</Description>
+		<Manufacturer>Redmi</Manufacturer>
+		<Price>1032</Price>
+		<ImgUrl>https://content.rozetka.com.ua/goods/images/big_tile/54463691.jpg</ImgUrl>
+		<Type>Telephone</Type>
+	</Product>
+	<Product>
+		<Name>3310 2022</Name>
+		<Manufacturer>Nokia</Manufacturer>
+		<Price>1030</Price>
+		<ImgUrl>https://content.rozetka.com.ua/goods/images/big_tile/265722808.jpg</ImgUrl>
+		<Type>Telephone</Type>
+	</Product>
+</ArrayOfProduct>
